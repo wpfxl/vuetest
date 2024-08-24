@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <div>
+      <StudentComponent/>
+      <hr/>
+      <SchoolComponent/>
+   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import StudentComponent from "@/components/Student";
+import SchoolComponent from "@/components/School";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: "App",
+  components:{
+    SchoolComponent,
+    StudentComponent,
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+   /*
+   全局的样式是不需要加scoped
+   全局共享
+   */
+   .title{
+     color: red;
+   }
 </style>
+
+
